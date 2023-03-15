@@ -30,7 +30,7 @@ div.navigationButtonsMain {
   margin: 100px 100px 100px 100px;
 }
 
-input[name="shopButton"], input[name="inventoryButton"] {
+input[name="main"], input[name="settings"] {
   width: 150px;
   height: 150px;
 }
@@ -135,6 +135,19 @@ div.colonel{
 img.colonelImg{
   height: 500px;
   width: 250px;
+}
+
+.settings-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+input[name="settings"] {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
 }
 
 /* SETTINGS STYLES */
