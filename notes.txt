@@ -1,3 +1,24 @@
+WEEK 3:
+
+**Week 3: Last chance to save the chicken 🐔🐔🐔**
+
+1. Collect students photos
+2. Write JS, so when we pay 1000 // 2000 // 5 000 // 10 000 phots appear in Inventory accordantly :
+- 1 000 - random image
+- 2 000 - random image you dont have in collection
+- 5 000 - ultime image of Maxime or Davy
+1. Find a solution (with local storage) so code works on mobile version
+2. Add page Settings to laptop version
+3. Add page Share to both laptop and mobile version
+4. Add page Account to both laptop and mobile version 
+
+✨ Optional: 
+
+1. Make colonel say different things
+2. Make chicken run on : hoover
+
+
+
 ///////////////////////////////////////////////////////////////////////
 Ideas :
 ///////////////////////////////////////////////////////////////////////
@@ -29,19 +50,6 @@ Arbre de compétence (visible ou pas >> plus simple) :
 
 
 Personnalisation du bucket et du fond grace aux photos collectibles :
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
