@@ -181,6 +181,39 @@ div.inventoryPage {
   display: none;
 }
 
+/* SHARE STYLES */
+#shareBox{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  height:60vh;
+  width: 68vw;
+  padding: 22px;
+  gap: 30px;
+}
+#shareBox p{
+  font-size: var(--h2Size);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logoutButton{
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#twitter {
+  height: 7vh;
+  width: 14vw;
+}
+#faceBook {
+  height: 7vh;
+  width: 14vw;
+}
+
+
+
 /* ANIMATION */
 /* HEART BEAT */
 @-webkit-keyframes heartBeat {
