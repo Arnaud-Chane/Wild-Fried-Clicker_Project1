@@ -4,22 +4,27 @@ let songs = ["resources/sounds/chickenTenders.mp3", "resources/sounds/didYouSee.
   "resources/sounds/ohMy.mp3", "resources/sounds/wow.mp3", "resources/sounds/yeahBoy.mp3"
 ];
 
-let randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+
+
 
 function play() {
+  let randomSong = songs[Math.floor(Math.random() * songs.length)];
   var audio = new Audio(randomSong);
   audio.play();
-}
+};
 
 function colonel() {
-  if (wings_counter.innerHTML === "100") {
+  let wingsNumber = parseInt(wings_counter.innerHTML);
+
+
+
+  if (wingsNumber > 15) {
     play();
-  }
-  if (wings_counter.innerHTML === "10") {
-    play();
-  } else {
-    console.log("Nope");
-  }
+} else {
+  console.log("Nope")
+}
+
 }
 
 // when document.getElementById('wings_counter').innerHTML == "10 wings" do function : play
