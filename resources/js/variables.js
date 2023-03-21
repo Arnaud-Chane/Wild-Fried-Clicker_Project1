@@ -1,8 +1,7 @@
 let wings = 0;
 let wingsPerClick = 1;
 let wingsPerSecond = 0;
-let facebookFactory = 50;
+let facebookFactory = 10;
 let twitterFactory = 100;
-let uberEatsFactory = 200;
-let quizzFactory = 400;
-
+let uberEatsFactory = 500;
+let quizzFactory = 1000;

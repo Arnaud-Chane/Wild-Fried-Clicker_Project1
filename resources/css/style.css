@@ -1,9 +1,16 @@
 /* VARIABLES */
 :root {
-  --backgroundLight: rgba(253, 238, 220, 1);
-  --backgroundClassic: #AD4560;
-  --sectionColor: #FABB5A;
+  /* LIGHT MOOD */
+  --numberColor: #AD4560;
+  --rowColor: #FABB5A;
   --textColor: white;
+  /* DARK MOOD */
+  /*
+  --numberColor: #39B5E0;
+  --rowColor: #FFFD95;
+  --textColor: #FFEA20;
+  */
+  /* TEXT */
   --title-Font: 'Rampart One', cursive;
   --text-Font: 'Barrio', cursive;
   --h1Size: 30px;
@@ -18,7 +25,11 @@
 }
 
 body {
-  background-color: var(--backgroundClassic);
+  background: url("cafeBlur.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 div.navigationButtonsMain {
@@ -40,11 +51,9 @@ input[name="button"] {
 }
 
 h1 {
-  color: var(--sectionColor);
+  color: var(--textColor);
   font-family: var(--title-Font);
   font-size: var(--h1Size);
-
-  text-shadow: 3px 5px 15px black;
   margin: 40px auto 10px auto;
 }
 
@@ -68,12 +77,12 @@ div.goods {
   font-family: var(--text-Font);
 }
 
-div.goods h2{
-  color:var(--backgroundClassic);
+div.goods h2 {
+  color: var(--numberColor);
 }
 
 div.row {
-  background-color: var(--sectionColor);
+  background-color: var(--rowColor);
   width: 350px;
   height: 100px;
   border-radius: 35px;
@@ -106,34 +115,76 @@ div.logout {
   align-items: center;
 }
 
-/* MAIN STYLES */
-div.mainPage {
-  background-color: var(--backgroundClassic);
-  width: 100vw;
-  height: 100vh;
+/* FIRST PAGE STYLES */
+.firstPage {
+  background: url("cafe.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+.firstPageH2 {
+  color: white;
+  font-size: 5vh;
+}
+
+.firstPageDiv {
+  background-color: var(--numberColor);
+  border-radius: 35px;
+  width: 70vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16vh auto auto auto;
+  box-shadow: white 0px 22px 70px 4px;
+}
+
+.firstPageButton {
+  width: 5vw;
+}
+
+/* MAIN STYLES */
 div.wingsNumber {
   display: flex;
   justify-content: center;
+  border-radius: 35px;
 }
 
 div.fallingImages {
   display: flex;
   justify-content: center;
-  margin: 5vh 5vh 10vh 0;
+  margin: 10vh auto auto auto;
 }
 
 img[name="firstWing"] {
   height: 70px;
   width: auto;
-  margin: 15px 20px 100px 110px;
+  margin: 7vh 0 5vh 0;
 }
 
 img[name="secondWing"] {
   height: 70px;
   width: auto;
-  margin: 100px 40px auto 40px;
+}
+
+.firstPlusOne {
+  margin: 5vh 0 0 0;
+  opacity: 0;
+}
+
+.secondPlusOne {
+  opacity: 0;
+}
+
+.thirdPlusOne {
+  margin: 10vh 0 0 0;
+  opacity: 0;
 }
 
 .bucket {
@@ -146,6 +197,10 @@ img[name="secondWing"] {
 div.shopChicken {
   display: flex;
   justify-content: flex-end;
+}
+
+#quizzStr {
+  opacity: 0;
 }
 
 /* INVENTORY STYLES */
@@ -180,39 +235,6 @@ div.settingsPage,
 div.inventoryPage {
   display: none;
 }
-
-/* SHARE STYLES */
-#shareBox{
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  height:60vh;
-  width: 68vw;
-  padding: 22px;
-  gap: 30px;
-}
-#shareBox p{
-  font-size: var(--h2Size);
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.logoutButton{
-  width: 100vw;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#twitter {
-  height: 7vh;
-  width: 14vw;
-}
-#faceBook {
-  height: 7vh;
-  width: 14vw;
-}
-
-
 
 /* ANIMATION */
 /* HEART BEAT */
@@ -260,7 +282,23 @@ div.inventoryPage {
   }
 }
 
+.firstPageDiv {
+  -webkit-animation: heartBeat 1s;
+  animation: heartBeat 1s;
+  animation-iteration-count: infinite;
+}
+
 input[name="bucket"]:hover {
+  -webkit-animation: heartBeat 0.8s;
+  animation: heartBeat 0.8s;
+  animation-iteration-count: infinite;
+}
+
+input[name="bucket"]:active {
+  opacity: 0;
+}
+
+.wobble {
   -webkit-animation: heartBeat 0.8s;
   animation: heartBeat 0.8s;
 }
@@ -268,8 +306,10 @@ input[name="bucket"]:hover {
 div[name="shopRow"]:hover {
   -webkit-animation: wobble 0.8s;
   animation: heartBeat 0.8s;
+  background-color: white;
 }
 
+/* WOBBLE */
 @-webkit-keyframes wobble {
   0% {
     transform: translateZ(0);
@@ -336,43 +376,12 @@ img[name="colonel"]:hover {
   animation-iteration-count: infinite;
 }
 
-
-
-/* RUN */
-@keyframes run {
-  from {
-    opacity: 0;
-    transform: translateX(+500px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.wobble {
+  -webkit-animation: wobble 0.8s;
+  animation: wobble 0.8s;
+  animation-iteration-count: 3;
 }
 
-img[name="chickenImg"] {
-  opacity: 0;
-  animation: run 2.00s linear forwards;
-}
-
-img[name="chickenImg"]:hoover {
-  opacity: 0;
-  animation: run 2.00s linear forwards;
-}
-
-/* FALL */
-@keyframes fall {
-  from {
-    opacity: 0;
-    transform: translateY(-700px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* BOUNCE */
 @keyframes bounce {
@@ -389,14 +398,37 @@ img[name="secondWing"] {
   animation: bounce 3s ease-out infinite;
 }
 
+/*BLINK*/
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.blinked {
+  animation: blink 1s;
+}
+
 /* LAPTOP MEDIA QUERY */
 @media screen and (min-width: 1200px) {
+  .firstPageDiv {
+    width: 20vw;
+  }
+
   body {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
   }
 
   h1.laptopTitleWFC {
@@ -408,8 +440,6 @@ img[name="secondWing"] {
     color: var(--textColor);
     font-family: var(--title-Font);
     font-size: 50px;
-
-    text-shadow: 3px 5px 15px black;
   }
 
   h2 {
@@ -458,18 +488,23 @@ img[name="secondWing"] {
   div.bucket {
     display: flex;
     justify-content: center;
-    height: 25vh;
+    height: 23vh;
+    margin: 1vh auto 10vh auto;
   }
 
   div.row {
     width: 250px;
-    height: 70px;
+    height: 60px;
     margin: 2vh auto 2vh auto;
     box-shadow: 3px 5px 15px black;
   }
 
   div.colonel {
     margin: auto 50px;
+  }
+
+  div.fallingImages {
+    margin: 70px 50px auto 50px;
   }
 
   input[name="button"] {
@@ -489,11 +524,11 @@ img[name="secondWing"] {
   img[name="chickenImg"] {
     height: 250px;
     width: auto;
-    margin: 55px;
+    margin: 25px;
   }
 
   img[name="colonel"] {
-    height: 340px;
+    height: 280px;
     width: auto;
     margin: 5px auto 10px auto;
   }
