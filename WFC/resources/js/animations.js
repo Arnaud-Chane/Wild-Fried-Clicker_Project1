@@ -12,6 +12,9 @@ function play() {
 }
 
 function colonel() {
+  if (wings_counter.innerHTML === "100") {
+    play();
+  }
   if (wings_counter.innerHTML === "10") {
     play();
   } else {
