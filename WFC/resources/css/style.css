@@ -199,6 +199,10 @@ div.shopChicken {
   justify-content: flex-end;
 }
 
+#quizzStr {
+  opacity: 0;
+}
+
 /* INVENTORY STYLES */
 img.faceImg {
   height: 80px;
@@ -233,7 +237,6 @@ div.inventoryPage {
 }
 
 /* ANIMATION */
-
 /* HEART BEAT */
 @-webkit-keyframes heartBeat {
   0% {
@@ -288,6 +291,16 @@ div.inventoryPage {
 input[name="bucket"]:hover {
   -webkit-animation: heartBeat 0.8s;
   animation: heartBeat 0.8s;
+  animation-iteration-count: infinite;
+}
+
+input[name="bucket"]:active {
+  opacity: 0;
+}
+
+.wobble {
+  -webkit-animation: heartBeat 0.8s;
+  animation: heartBeat 0.8s;
 }
 
 div[name="shopRow"]:hover {
@@ -297,7 +310,6 @@ div[name="shopRow"]:hover {
 }
 
 /* WOBBLE */
-
 @-webkit-keyframes wobble {
   0% {
     transform: translateZ(0);
@@ -364,41 +376,12 @@ img[name="colonel"]:hover {
   animation-iteration-count: infinite;
 }
 
-/* RUN */
-@keyframes run {
-  from {
-    opacity: 0;
-    transform: translateX(+500px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.wobble {
+  -webkit-animation: wobble 0.8s;
+  animation: wobble 0.8s;
+  animation-iteration-count: 3;
 }
 
-img[name="chickenImg"] {
-  opacity: 0;
-  animation: run 2.00s linear forwards;
-}
-
-img[name="chickenImg"]:hoover {
-  opacity: 0;
-  animation: run 2.00s linear forwards;
-}
-
-/* FALL */
-@keyframes fall {
-  from {
-    opacity: 0;
-    transform: translateY(-700px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* BOUNCE */
 @keyframes bounce {
@@ -420,15 +403,17 @@ img[name="secondWing"] {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
 
-.blinked{
+.blinked {
   animation: blink 1s;
 }
 

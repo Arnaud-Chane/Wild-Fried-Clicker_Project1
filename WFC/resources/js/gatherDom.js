@@ -8,6 +8,7 @@ let mainButton1 = document.getElementById('mainButton1');
 let mainButton2 = document.getElementById('mainButton2');
 let invButton1 = document.getElementById('invButton1');
 let bucketImg = document.querySelector('.bucket');
+let chickenImg = document.querySelector('.chicken');
 
 
 //DOM From Store
@@ -22,11 +23,3 @@ let facebookInv = document.querySelector('#item1');
 let twitterInv = document.querySelector('#item2');
 let uberEatsInv = document.querySelector('#item3');
 let quizzInv = document.querySelector('#item4');
-
-
-
-
-
-
-
-

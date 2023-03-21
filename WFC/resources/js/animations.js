@@ -1,12 +1,8 @@
-// Colonel Songs
+// FUNCTIONS
 
-let songs = ["resources/sounds/chickenTenders.mp3", "resources/sounds/didYouSee.mp3", "resources/sounds/laugh.mp3",
+let songs = ["resources/sounds/didYouSee.mp3", "resources/sounds/laugh.mp3",
   "resources/sounds/ohMy.mp3", "resources/sounds/wow.mp3", "resources/sounds/yeahBoy.mp3"
 ];
-
-
-
-
 
 function play() {
   let randomSong = songs[Math.floor(Math.random() * songs.length)];
@@ -14,26 +10,38 @@ function play() {
   audio.play();
 };
 
-function colonel() {
+function playAndWobble() {
+  document.getElementById("colonel").classList.add("wobble");
+  play();
+  setTimeout(function() {
+    document.getElementById("colonel").classList.remove("wobble");
+  }, 3000);
+}
+
+
+function underTwoHundreds() {
   let wingsNumber = parseInt(wings_counter.innerHTML);
+  document.getElementById("colonel").classList.remove("wobble");
 
-
-
-  if (wingsNumber > 15) {
+  if (wingsNumber == 109) {
     play();
-} else {
-  console.log("Nope")
+    document.getElementById("colonel").classList.add("wobble");
+    setTimeout(function() {
+      document.getElementById("colonel").classList.remove("wobble");
+    }, 3000);
+  } else if (wingsNumber == 10) {
+    play();
+    document.getElementById("colonel").classList.add("wobble");
+    setTimeout(function() {
+      document.getElementById("colonel").classList.remove("wobble");
+    }, 3000);
+  } else {
+    console.log("Nope");
+  }
 }
 
-}
 
-// when document.getElementById('wings_counter').innerHTML == "10 wings" do function : play
-
-
-
-// blinking plusOne
-
-function blink() {
+function plusOne() {
   document.getElementById('firstPlus').classList.remove("blinked");
   document.getElementById('secondPlus').classList.remove("blinked");
   document.getElementById('thirdPlus').classList.remove("blinked");
@@ -42,7 +50,17 @@ function blink() {
   randomPlus.classList.add("blinked");
 }
 
-bucketImg.addEventListener("click", blink);
-bucketImg.addEventListener("click", colonel);
 
-// why when random choses the same class twice .remove does not work ???
+
+
+// EVENT LISTENERS
+
+bucketImg.addEventListener("click", plusOne);
+
+bucketImg.addEventListener("click", underTwoHundreds);
+
+twitterStr.addEventListener("click",
+  function() {
+    setInterval(playAndWobble, 5000);
+  }
+);
