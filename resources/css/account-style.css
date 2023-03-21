@@ -137,7 +137,7 @@ img[name="colonel"] {
 
 /* SETTINGS STYLES */
 
- 
+
 
 
 
@@ -151,7 +151,7 @@ img[name="colonel"] {
    margin-right:auto;
    margin-top:5vh;
    margin-bottom: 7vh;
-   
+
 }
 
 #exit-account {
@@ -163,7 +163,7 @@ div.title {
     display: flex;
     justify-content: center;
     margin: 5vh 1vh 3vh 1vh;
-    
+
 }
 
 
@@ -221,7 +221,7 @@ input {
     padding-top:20px;
     margin:auto;
     font-family: var(--ptextFont);
-    
+
 }
 
 p {
@@ -240,7 +240,7 @@ p {
 #check {
     width: 25px;
     opacity: ;
-    
+
 }
 
 .or-container {

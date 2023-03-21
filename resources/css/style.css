@@ -1,15 +1,10 @@
 /* VARIABLES */
 :root {
-  /* LIGHT MOOD */
+
   --numberColor: #AD4560;
   --rowColor: #FABB5A;
   --textColor: white;
-  /* DARK MOOD */
-  /*
-  --numberColor: #39B5E0;
-  --rowColor: #FFFD95;
-  --textColor: #FFEA20;
-  */
+
   /* TEXT */
   --title-Font: 'Rampart One', cursive;
   --text-Font: 'Barrio', cursive;
@@ -235,6 +230,46 @@ div.settingsPage,
 div.inventoryPage {
   display: none;
 }
+
+img[name="settingsMain"]{
+  width: 5vw;
+  margin-top: 20vh;
+}
+
+/* SHARE STYLES */
+#shareBox{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  height: auto;
+  width: 350px;
+  padding: 22px;
+  gap: 30px;
+}
+#shareBox p{
+  color: var(--numberColor);
+  font-size: var(--h2Size);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+}
+
+.logoutButton{
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+}
+
+#twitter {
+  height: 7vh;
+  width: 14vw;
+}
+#faceBook {
+  height: 7vh;
+  width: 14vw;
+}
+
 
 /* ANIMATION */
 /* HEART BEAT */
