@@ -159,19 +159,32 @@ div.wingsNumber {
 div.fallingImages {
   display: flex;
   justify-content: center;
-  margin: 5vh 5vh 10vh 0;
+  margin: 10vh auto auto auto;
 }
 
 img[name="firstWing"] {
   height: 70px;
   width: auto;
-  margin: 40px 20px 50px 40px;
+  margin: 7vh 0 5vh 0;
 }
 
 img[name="secondWing"] {
   height: 70px;
   width: auto;
-  margin: 100px 20px auto 40px;
+}
+
+.firstPlusOne {
+  margin: 5vh 0 0 0;
+  opacity: 0;
+}
+
+.secondPlusOne {
+  opacity: 0;
+}
+
+.thirdPlusOne {
+  margin: 10vh 0 0 0;
+  opacity: 0;
 }
 
 .bucket {
@@ -220,6 +233,7 @@ div.inventoryPage {
 }
 
 /* ANIMATION */
+
 /* HEART BEAT */
 @-webkit-keyframes heartBeat {
   0% {
@@ -271,7 +285,6 @@ div.inventoryPage {
   animation-iteration-count: infinite;
 }
 
-
 input[name="bucket"]:hover {
   -webkit-animation: heartBeat 0.8s;
   animation: heartBeat 0.8s;
@@ -282,6 +295,8 @@ div[name="shopRow"]:hover {
   animation: heartBeat 0.8s;
   background-color: white;
 }
+
+/* WOBBLE */
 
 @-webkit-keyframes wobble {
   0% {
@@ -400,6 +415,23 @@ img[name="secondWing"] {
   animation: bounce 3s ease-out infinite;
 }
 
+/*BLINK*/
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blinked{
+  animation: blink 1s;
+}
+
 /* LAPTOP MEDIA QUERY */
 @media screen and (min-width: 1200px) {
   .firstPageDiv {
@@ -472,7 +504,7 @@ img[name="secondWing"] {
     display: flex;
     justify-content: center;
     height: 23vh;
-    margin: 7vh auto 10vh auto;
+    margin: 1vh auto 10vh auto;
   }
 
   div.row {
@@ -486,8 +518,8 @@ img[name="secondWing"] {
     margin: auto 50px;
   }
 
-  div.fallingImages{
-    margin: auto 50px auto;
+  div.fallingImages {
+    margin: 70px 50px auto 50px;
   }
 
   input[name="button"] {
