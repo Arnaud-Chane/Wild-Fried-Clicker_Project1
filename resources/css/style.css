@@ -250,6 +250,11 @@ img[name="settingsMain"]{
 }
 
 /* SHARE STYLES */
+
+input[name="buttonExit"] {
+  width: 70px;
+  height: auto;
+}
 #shareBox{
   display: flex;
   flex-direction:column;
@@ -332,13 +337,12 @@ div.title-account h1 {
   justify-content: center;
 }
 
-form input {
-  background-color: var(--forminputColor);
+input {
   border: none;
   border-radius: 35px;
   padding: 10px;
   margin: 10px;
-  width: 70%;
+  width: 40%;
   margin: auto;
   box-shadow: 3px 2px 3px black;
 }
@@ -702,6 +706,7 @@ img[name="secondWing"] {
     width: auto;
   }
 
+
 /* LAPTOP MEDIA QUERY ACCOUNT PAGE */
 
 div.accountPage {
@@ -744,10 +749,22 @@ p {
   font-size: 25px;
 }
 
-
-  
   #textGoods{
     font-size: 2vh;
+  }
+  #twitter {
+    height: 9vh;
+    width: 6vw;
+  }
+  #faceBook {
+    height: 9vh;
+    width: 6vw;
+  }
+  .logoutButton {
+    width: 35vw;
+  }
+  input[name="buttonExit"]{
+  margin-bottom: 420px;
   }
 }
 
