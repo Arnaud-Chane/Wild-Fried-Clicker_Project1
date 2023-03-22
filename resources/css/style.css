@@ -250,6 +250,11 @@ img[name="settingsMain"]{
 }
 
 /* SHARE STYLES */
+
+input[name="buttonExit"] {
+  width: 70px;
+  height: auto;
+}
 #shareBox{
   display: flex;
   flex-direction:column;
@@ -332,12 +337,11 @@ div.title-account h1 {
 }
 
 input {
-  background-color: var(--inputColor);
   border: none;
   border-radius: 35px;
   padding: 10px;
   margin: 10px;
-  width: 70%;
+  width: 40%;
   margin: auto;
 }
 
@@ -699,9 +703,23 @@ img[name="secondWing"] {
     height: 60px;
     width: auto;
   }
-  
+
   #textGoods{
     font-size: 2vh;
+  }
+  #twitter {
+    height: 9vh;
+    width: 6vw;
+  }
+  #faceBook {
+    height: 9vh;
+    width: 6vw;
+  }
+  .logoutButton {
+    width: 35vw;
+  }
+  input[name="buttonExit"]{
+  margin-bottom: 420px;
   }
 }
 
