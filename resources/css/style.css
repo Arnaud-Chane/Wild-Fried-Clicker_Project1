@@ -56,6 +56,17 @@ h2 {
   font-size: var(--h2Size);
 }
 
+h3 {
+  color: var(--textColor);
+  font-family: var(--text-Font);
+  font-size: 45px;
+}
+
+h4 {
+  margin-left: 5px;
+  color: var(--textColor);
+}
+
 div.title {
   display: flex;
   justify-content: center;
@@ -196,6 +207,10 @@ div[name="shopRow"]{
   background-color: grey;
 }
 
+#textGoods{
+  font-size: 2.5vh;
+}
+
 #quizzStr {
   opacity: 0;
 }
@@ -206,37 +221,7 @@ img.faceImg {
   width: auto;
 }
 
-#faceOne {
-  opacity: 0;
-}
 
-#faceTwo {
-  opacity: 0;
-}
-
-#faceThree {
-  opacity: 0;
-}
-
-#faceFour {
-  opacity: 0;
-}
-
-#faceFive {
-  opacity: 0;
-}
-
-#faceSix {
-  opacity: 0;
-}
-
-#faceSeven {
-  opacity: 0;
-}
-
-#faceEight {
-  opacity: 0;
-}
 
 div.colonel {
   display: flex;

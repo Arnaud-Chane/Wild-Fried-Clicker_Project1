@@ -54,7 +54,6 @@ function plusOne() {
 function showPhoto() {
   let wingsNumber = parseInt(wings_counter.innerHTML);
 
-  if (wingsNumber > 500) {
     const faces = [faceOne, faceTwo, faceThree, faceFour, faceFive, faceSix, faceSeven, faceEight];
     const availableFaces = faces.filter(face => face.style.opacity == "0");
 
@@ -66,7 +65,33 @@ function showPhoto() {
       console.log("all done");
     }
   }
-}
+
+
+
+
+const wingsCounter = document.getElementById('wings_counter');
+
+
+const facebookRow = document.getElementById('facebookStr');
+const twitterRow = document.getElementById('twitterStr');
+const uberEatsRow = document.getElementById('uberEatsStr');
+
+
+wingsCounter.addEventListener('DOMSubtreeModified', () => {
+  const wingsNumber = parseInt(wingsCounter.innerText);
+
+  if (wingsNumber > 9) {
+    facebookRow.style.backgroundColor = "#FABB5A";
+  }
+
+  if (wingsNumber > 99) {
+    twitterRow.style.backgroundColor = "#FABB5A";
+  }
+
+  if (wingsNumber > 499) {
+    uberEatsRow.style.backgroundColor = "#FABB5A";
+  }
+});
 
 
 
