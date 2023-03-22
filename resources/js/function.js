@@ -36,128 +36,48 @@ function invDisplay(){
 
 // Display Wings
 
-
 function wingsDisplay() {
-  if('wings' in localStorage) {
-    wings_counter.innerHTML = String(localStorage.getItem('wings')).replace(/(.)(?=(\d{3})+$)/g,'$1 ');
-  } else {
-    wings_counter.innerHTML = String(wings).replace(/(.)(?=(\d{3})+$)/g,'$1 ');
-  }
+  wings_counter.innerHTML = String(wings).replace(/(.)(?=(\d{3})+$)/g,'$1 ');
 }
+
+console.log(wingsDisplay())
 
 function incrementPerClick() {
-  if('wings' in localStorage){
-    wings = parseInt(localStorage.getItem('wings')) + wingsPCLocalStorage();
-    localStorage.setItem('wings', wings)
-  } else {
-    wings += wingsPerClick;
-    localStorage.setItem('wings', wings);
-  }
-  wingsDisplay(); 
+  wings += wingsPerClick;
+  wingsDisplay();
 }
 
 
-function wingsPCLocalStorage() {
-  if('wingsPC' in localStorage) {
-    return parseInt(localStorage.getItem('wingsPC'));
-  } else {
-    localStorage.setItem('wingsPC', wingsPerClick);
-    return wingsPerClick;
-  }
-}
-
-function wingsPSLocalStorage() {
-  if('wingsPS' in localStorage) {
-    return parseInt(localStorage.getItem('wingsPS'));
-  } else {
-    localStorage.setItem('wingsPS', wingsPerSecond);
-    return wingsPerSecond;
-  }
-}
-
-
-function spendMoney() {
-  
-}
 
 // Function : Buying stuff in store
 
 setInterval(incrementPerSecond, 1000);
 
 function incrementPerSecond() {
-  if('wings' in localStorage){
-    wings = parseInt(localStorage.getItem('wings')) + wingsPSLocalStorage();
-    localStorage.setItem('wings', wings);
-  } else {
-    wings += wingsPSLocalStorage();
-  }
+  wings += wingsPerSecond;
   wingsDisplay();
 }
 
-
-
-//Store 
-
 function buyFacebook() {
-
-  if('wingsPC' in localStorage) {
-    wingsPerClick += facebookFactory;
-    localStorage.setItem('wingsPC', wingsPerClick);
-  } else {
-    wingsPerClick += facebookFactory;
-    localStorage.setItem('wingsPC', wingsPerClick);
-  }
-
+  wingsPerClick += facebookFactory;
   facebookInv.classList.remove("facebookInvNone");
   facebookInv.classList.add("facebookInv");
 }
 
 function buyTwitter() {
-
-  if('wingsPS' in localStorage) {
-    wingsPerSecond += twitterFactory;
-    localStorage.setItem('wingsPS', wingsPerSecond);
-  } else {
-    wingsPerSecond += twitterFactory;
-    localStorage.setItem('wingsPS', wingsPerSecond);
-  }
+  wingsPerSecond += twitterFactory;
   twitterInv.classList.remove("facebookInvNone");
   twitterInv.classList.add("facebookInv");
 }
 
-
 function buyUberEats() {
-  
-  if('wingsPC' in localStorage) {
-    wingsPerClick += uberEatsFactory;
-    localStorage.setItem('wingsPC', wingsPerClick);
-  } else {
-    wingsPerClick += uberEatsFactory;
-    localStorage.setItem('wingsPC', wingsPerClick);
-  }  
-  
-  uberEatsInv.classList.remove("uberEatsInvNone");
-  uberEatsInv.classList.add("uberEatsInv");
+  wingsPerClick += uberEatsFactory;
+  //uberEatsInv.classList.remove("uberEatsInvNone");
+//  uberEatsInv.classList.add("uberEatsInv");
 }
 
 function buyQuizz() {
-  
-  if('wingsPC' in localStorage) {
-    wingsPerClick += quizzFactory;
-    localStorage.setItem('wingsPC', wingsPerClick);
-  } else {
-    wingsPerClick += quizzFactory;
-    localStorage.setItem('wingsPC', wingsPerClick);
-  }  
-  
+  wingsPerClick += quizzFactory;
   quizzInv.classList.remove("quizzInvNone");
   quizzInv.classList.add("quizzInv");
 }
-
-
-
-
-
-
-
-

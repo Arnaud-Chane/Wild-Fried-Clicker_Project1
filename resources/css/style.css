@@ -1,22 +1,11 @@
 /* VARIABLES */
 :root {
-
   --numberColor: #AD4560;
-  --backgroundClassic: #AD4560;
   --rowColor: #FABB5A;
-  --forminputColor: #FABB5A;
-
   --textColor: white;
-  --ptextColor: #ffffff;
-  --accountSectionColor:#FF5245;
-
-
   /* TEXT */
   --title-Font: 'Rampart One', cursive;
-  --title-account-Font:'Rampart One', cursive;
   --text-Font: 'Barrio', cursive;
-  --ptextFont: 'Barrio', cursive;
-
   --h1Size: 30px;
   --h2Size: 30px;
 }
@@ -203,18 +192,49 @@ div.shopChicken {
   justify-content: flex-end;
 }
 
-#quizzStr {
-  opacity: 0;
+div[name="shopRow"]{
+  background-color: grey;
 }
 
-#textGoods{
-  font-size: 3vh;
+#quizzStr {
+  opacity: 0;
 }
 
 /* INVENTORY STYLES */
 img.faceImg {
   height: 80px;
   width: auto;
+}
+
+#faceOne {
+  opacity: 0;
+}
+
+#faceTwo {
+  opacity: 0;
+}
+
+#faceThree {
+  opacity: 0;
+}
+
+#faceFour {
+  opacity: 0;
+}
+
+#faceFive {
+  opacity: 0;
+}
+
+#faceSix {
+  opacity: 0;
+}
+
+#faceSeven {
+  opacity: 0;
+}
+
+#faceEight {
   opacity: 0;
 }
 
@@ -244,27 +264,23 @@ div.inventoryPage {
   display: none;
 }
 
-img[name="settingsMain"]{
+img[name="settingsMain"] {
   width: 5vw;
   margin-top: 20vh;
 }
 
 /* SHARE STYLES */
-
-input[name="buttonExit"] {
-  width: 70px;
-  height: auto;
-}
-#shareBox{
+#shareBox {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   height: auto;
   width: 350px;
   padding: 22px;
   gap: 30px;
 }
-#shareBox p{
+
+#shareBox p {
   color: var(--numberColor);
   font-size: var(--h2Size);
   display: flex;
@@ -272,7 +288,7 @@ input[name="buttonExit"] {
   margin-top: 1vh;
 }
 
-.logoutButton{
+.logoutButton {
   width: 100vw;
   display: flex;
   justify-content: space-evenly;
@@ -283,129 +299,66 @@ input[name="buttonExit"] {
   height: 7vh;
   width: 14vw;
 }
+
 #faceBook {
   height: 7vh;
   width: 14vw;
 }
 
-/* ACCOUNT PAGE STYLES */
-.exit-account {
-  display:flex;
-  width: 100%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:5vh;
-  margin-bottom:7vh;
-}
-
-#exit-account {
-  margin-left:35px;
-}
-
-div.title-account {
-  display: flex;
-  justify-content: center;
-  margin: 5vh 1vh 3vh 1vh;
-}
-
-div.title-account h1 {
-  font-family: 'Rampart One' cursive;
-  font-size: 35px;
-}
-
-.form-container {
-  background-color:var(--accountSectionColor);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 70%;
-  border-radius: 35px;
-  margin: auto auto 2vh auto;
-  box-shadow: 3px 5px 3px black;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--textColor);
-  height: 220px;
-}
-
-.label {
-  display: flex;
-  justify-content: center;
-}
-
-input {
-  border: none;
-  border-radius: 35px;
-  padding: 10px;
-  margin: 10px;
-  width: 40%;
-  margin: auto;
-  box-shadow: 3px 2px 3px black;
-}
-
-.check-container {
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  margin:auto;
-  width:90%;
-}
-
-.agree-text {
-  padding-top:20px;
-  margin:auto;
-  font-family: var(--ptextFont);
-}
-
-p {
-  font-size: 13px;
-  color: var(--ptextColor);
-  font-family: var(--ptextFont);
-}
-
-.button-check {
-  display: flex;
-  margin-left: 10px;
-  margin-bottom: 30px;
-}
-
-#check {
-  width: 25px;
-  opacity: 0;
-}
-
-.or-container {
-  display: flex;
-  justify-content: center;
-}
-
-.account-logos {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 280px;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#logo-facebook-account {
-  width: 60px;
-}
-
-#logo-twitter-account {
-  width: 60px;
-}
-
-
-
-
 /* ANIMATION */
 /* HEART BEAT */
+
+
+@-webkit-keyframes heartBeatPhoto {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(3);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(3);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heartBeatPhoto {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(3);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(3);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+
+.heartBeat {
+  -webkit-animation: heartBeatPhoto 2s;
+  animation: heartBeatPhoto 2s;
+}
+
 @-webkit-keyframes heartBeat {
   0% {
     transform: scale(1);
@@ -449,6 +402,7 @@ p {
     transform: scale(1);
   }
 }
+
 
 .firstPageDiv {
   -webkit-animation: heartBeat 1s;
@@ -549,7 +503,6 @@ img[name="colonel"]:hover {
   animation: wobble 0.8s;
   animation-iteration-count: 3;
 }
-
 
 /* BOUNCE */
 @keyframes bounce {
@@ -702,69 +655,8 @@ img[name="secondWing"] {
   }
 
   img.faceImg {
-    height: 60px;
-    width: auto;
-  }
-
-
-/* LAPTOP MEDIA QUERY ACCOUNT PAGE */
-
-div.accountPage {
-  display: flex;
-    justify-content: center;
-}
-
-
-
-div.form-container {
-  width:40vw;
-  height:70vh;
-}
-
-div.title-account {
-  height:70vh;
-  display:flex;
-  ;
-}
-
-div.title-account h1{
-  
-  font-size:50px;
-  margin-right:40px;
-}
-
-
-form input {
-  height:60px;
-}
-
-.check-container {
-  display: flex;
-  align-items:center;
-  justify-content: center;
-}
-
-
-p {
-  font-size: 25px;
-}
-
-  #textGoods{
-    font-size: 2vh;
-  }
-  #twitter {
-    height: 9vh;
-    width: 6vw;
-  }
-  #faceBook {
-    height: 9vh;
-    width: 6vw;
-  }
-  .logoutButton {
-    width: 35vw;
-  }
-  input[name="buttonExit"]{
-  margin-bottom: 420px;
+    height: 50px;
+    width: 50px;
+    margin: auto 10px;
   }
 }
-
