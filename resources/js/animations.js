@@ -51,6 +51,26 @@ function plusOne() {
 }
 
 
+function showPhoto() {
+  let wingsNumber = parseInt(wings_counter.innerHTML);
+
+  if (wingsNumber > 500) {
+    const faces = [faceOne, faceTwo, faceThree, faceFour, faceFive, faceSix, faceSeven, faceEight];
+    const availableFaces = faces.filter(face => face.style.opacity == "0");
+
+    if (availableFaces.length > 0) {
+      const selectedFace = availableFaces[0];
+      selectedFace.style.opacity = "1";
+      selectedFace.classList.add("heartBeat");
+    } else {
+      console.log("all done");
+    }
+  }
+}
+
+
+
+
 
 
 // EVENT LISTENERS
@@ -64,3 +84,4 @@ twitterStr.addEventListener("click",
     setInterval(playAndWobble, 5000);
   }
 );
+document.querySelector('#uberEatsStr').addEventListener("click", showPhoto);
