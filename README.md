@@ -1,5 +1,9 @@
 # project1
 
+URL pour accéder à notre jeu :
+https://wild-fried-clicker.netlify.app/
+
+
 Figma Laptop :
 https://www.figma.com/file/9tGawBw10XSXSHjfASUS3k/Laptop?node-id=0%3A1&t=aAsMWEz3vSVWarSd-0
 
