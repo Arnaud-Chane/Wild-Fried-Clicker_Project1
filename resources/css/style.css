@@ -207,6 +207,10 @@ div.shopChicken {
   opacity: 0;
 }
 
+#textGoods{
+  font-size: 3vh;
+}
+
 /* INVENTORY STYLES */
 img.faceImg {
   height: 80px;
@@ -741,4 +745,9 @@ p {
 }
 
 
+  
+  #textGoods{
+    font-size: 2vh;
+  }
 }
+
