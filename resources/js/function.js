@@ -36,46 +36,120 @@ function invDisplay(){
 
 // Display Wings
 
+
 function wingsDisplay() {
-  wings_counter.innerHTML = String(wings).replace(/(.)(?=(\d{3})+$)/g,'$1 ');
+  if('wings' in localStorage) {
+    wings_counter.innerHTML = String(localStorage.getItem('wings')).replace(/(.)(?=(\d{3})+$)/g,'$1 ');
+  } else {
+    wings_counter.innerHTML = String(wings).replace(/(.)(?=(\d{3})+$)/g,'$1 ');
+  }
 }
 
 function incrementPerClick() {
-  wings += wingsPerClick;
-  wingsDisplay();
+  if('wings' in localStorage){
+    wings = parseInt(localStorage.getItem('wings')) + wingsPCLocalStorage();
+    localStorage.setItem('wings', wings)
+  } else {
+    wings += wingsPerClick;
+    localStorage.setItem('wings', wings);
+  }
+  wingsDisplay(); 
 }
 
 
+function wingsPCLocalStorage() {
+  if('wingsPC' in localStorage) {
+    return parseInt(localStorage.getItem('wingsPC'));
+  } else {
+    localStorage.setItem('wingsPC', wingsPerClick);
+    return wingsPerClick;
+  }
+}
+
+function wingsPSLocalStorage() {
+  if('wingsPS' in localStorage) {
+    return parseInt(localStorage.getItem('wingsPS'));
+  } else {
+    localStorage.setItem('wingsPS', wingsPerSecond);
+    return wingsPerSecond;
+  }
+}
+
+
+function spendMoney() {
+  
+}
 
 // Function : Buying stuff in store
 
 setInterval(incrementPerSecond, 1000);
 
 function incrementPerSecond() {
-  wings += wingsPerSecond;
+  if('wings' in localStorage){
+    wings = parseInt(localStorage.getItem('wings')) + wingsPSLocalStorage();
+    localStorage.setItem('wings', wings);
+  } else {
+    wings += wingsPSLocalStorage();
+  }
   wingsDisplay();
 }
 
+
+
+//Store 
+
 function buyFacebook() {
-  wingsPerClick += facebookFactory;
+
+  if('wingsPC' in localStorage) {
+    wingsPerClick += facebookFactory;
+    localStorage.setItem('wingsPC', wingsPerClick);
+  } else {
+    wingsPerClick += facebookFactory;
+    localStorage.setItem('wingsPC', wingsPerClick);
+  }
+
   facebookInv.classList.remove("facebookInvNone");
   facebookInv.classList.add("facebookInv");
 }
 
 function buyTwitter() {
-  wingsPerSecond += twitterFactory;
+
+  if('wingsPS' in localStorage) {
+    wingsPerSecond += twitterFactory;
+    localStorage.setItem('wingsPS', wingsPerSecond);
+  } else {
+    wingsPerSecond += twitterFactory;
+    localStorage.setItem('wingsPS', wingsPerSecond);
+  }
   twitterInv.classList.remove("facebookInvNone");
   twitterInv.classList.add("facebookInv");
 }
 
+
 function buyUberEats() {
-  wingsPerClick += uberEatsFactory;
+  
+  if('wingsPC' in localStorage) {
+    wingsPerClick += uberEatsFactory;
+    localStorage.setItem('wingsPC', wingsPerClick);
+  } else {
+    wingsPerClick += uberEatsFactory;
+    localStorage.setItem('wingsPC', wingsPerClick);
+  }  
+  
   uberEatsInv.classList.remove("uberEatsInvNone");
   uberEatsInv.classList.add("uberEatsInv");
 }
 
 function buyQuizz() {
-  wingsPerClick += quizzFactory;
+  
+  if('wingsPC' in localStorage) {
+    wingsPerClick += quizzFactory;
+    localStorage.setItem('wingsPC', wingsPerClick);
+  } else {
+    wingsPerClick += quizzFactory;
+    localStorage.setItem('wingsPC', wingsPerClick);
+  }  
+  
   quizzInv.classList.remove("quizzInvNone");
   quizzInv.classList.add("quizzInv");
 }

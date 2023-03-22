@@ -4,7 +4,7 @@
   --numberColor: #AD4560;
   --backgroundClassic: #AD4560;
   --rowColor: #FABB5A;
-  --inputColor: #FABB5A;
+  --forminputColor: #FABB5A;
 
   --textColor: white;
   --ptextColor: #ffffff;
@@ -321,6 +321,7 @@ div.title-account h1 {
   width: 70%;
   border-radius: 35px;
   margin: auto auto 2vh auto;
+  box-shadow: 3px 5px 3px black;
 }
 
 .form {
@@ -343,6 +344,7 @@ input {
   margin: 10px;
   width: 40%;
   margin: auto;
+  box-shadow: 3px 2px 3px black;
 }
 
 .check-container {
@@ -703,6 +705,49 @@ img[name="secondWing"] {
     height: 60px;
     width: auto;
   }
+
+
+/* LAPTOP MEDIA QUERY ACCOUNT PAGE */
+
+div.accountPage {
+  display: flex;
+    justify-content: center;
+}
+
+
+
+div.form-container {
+  width:40vw;
+  height:70vh;
+}
+
+div.title-account {
+  height:70vh;
+  display:flex;
+  ;
+}
+
+div.title-account h1{
+  
+  font-size:50px;
+  margin-right:40px;
+}
+
+
+form input {
+  height:60px;
+}
+
+.check-container {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+p {
+  font-size: 25px;
+}
 
   #textGoods{
     font-size: 2vh;
