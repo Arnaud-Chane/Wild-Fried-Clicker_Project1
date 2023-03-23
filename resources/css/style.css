@@ -8,19 +8,14 @@
   --textColor: white;
   --ptextColor: #ffffff;
   --accountSectionColor:#FF5245;
-  /* lalala */
-
-
   --textColor: white;
 
   /* TEXT */
   --title-Font: 'Rampart One', cursive;
   --text-Font: 'Barrio', cursive;
-
+  --title-account-Font:'Rampart One', cursive;
   --ptextFont: 'Barrio', cursive;
   
-
-
   --h1Size: 30px;
   --h2Size: 30px;
 }
@@ -236,8 +231,6 @@ img.faceImg {
   width: auto;
 }
 
-
-
 div.colonel {
   display: flex;
   justify-content: space-around;
@@ -305,10 +298,43 @@ img[name="settingsMain"] {
   width: 14vw;
 }
 
-/* ANIMATION */
-/* HEART BEAT */
 
+/*ACCOUNT PAGE*/
 
+.exit-account {
+  display:flex;
+  width: 100%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:5vh;
+  margin-bottom:7vh;
+}
+
+#exit-account {
+  margin-left:35px;
+}
+
+div.title-account {
+  display: flex;
+  justify-content: center;
+  margin: 5vh 1vh 3vh 1vh;
+}
+
+div.title-account h1 {
+  font-family: 'Rampart One' cursive;
+  font-size: 35px;
+}
+
+.form-container {
+  background-color:var(--accountSectionColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  border-radius: 35px;
+  margin: auto auto 2vh auto;
+  box-shadow: 3px 5px 3px black;
+}
 
 .form {
   display: flex;
@@ -317,6 +343,96 @@ img[name="settingsMain"] {
   color: var(--textColor);
   height: 280px;
 }
+
+.label {
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  background-color:var(--forminputColor);
+  border: none;
+  border-radius: 35px;
+  padding: 10px;
+  margin: 10px;
+  width: 70%;
+  margin: auto;
+  box-shadow:3px 2px 3px;
+}
+
+#submit-button {
+  background-color:var(--submitButton);
+  font-size: 20px;
+  font-family: var(--text-Font);
+  color:var(--submitText);
+
+}
+.check-container {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  margin:auto;
+  width:90%;
+}
+
+.agree-text {
+  padding-top:20px;
+  margin:auto;
+  font-family: var(--ptextFont);
+}
+
+p {
+  font-size: 13px;
+  color: var(--ptextColor);
+  font-family: var(--ptextFont);
+}
+
+.button-check {
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+
+#check {
+  width: 35px;
+}
+
+.or-container {
+  display: flex;
+  justify-content: center;
+}
+
+.account-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 280px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+#logo-facebook-account {
+  width: 60px;
+}
+
+#logo-twitter-account {
+  width: 60px;
+}
+
+
+
+
+
+
+
+/* ANIMATION */
+/* HEART BEAT */
+
+
+
 
 
 @-webkit-keyframes heartBeatPhoto {
@@ -334,22 +450,6 @@ img[name="settingsMain"] {
   }
 
 
-#submit-button {
-  background-color:var(--submitButton);
-  font-size: 20px;
-  font-family: var(--text-Font);
-  color:var(--submitText);
-
-}
-
-.check-container {
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  margin:auto;
-  width:90%;
-}
-
   42% {
     transform: scale(3);
   }
@@ -360,9 +460,6 @@ img[name="settingsMain"] {
   }
 }
 
-#check {
-  width: 25px;
-}
 
 
 @keyframes heartBeatPhoto {
