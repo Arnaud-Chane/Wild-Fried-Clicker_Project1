@@ -40,6 +40,8 @@ function wingsDisplay() {
   wings_counter.innerHTML = String(wings).replace(/(.)(?=(\d{3})+$)/g,'$1 ');
 }
 
+console.log(wingsDisplay())
+
 function incrementPerClick() {
   wings += wingsPerClick;
   wingsDisplay();
@@ -70,8 +72,8 @@ function buyTwitter() {
 
 function buyUberEats() {
   wingsPerClick += uberEatsFactory;
-  uberEatsInv.classList.remove("uberEatsInvNone");
-  uberEatsInv.classList.add("uberEatsInv");
+  //uberEatsInv.classList.remove("uberEatsInvNone");
+//  uberEatsInv.classList.add("uberEatsInv");
 }
 
 function buyQuizz() {
@@ -79,11 +81,3 @@ function buyQuizz() {
   quizzInv.classList.remove("quizzInvNone");
   quizzInv.classList.add("quizzInv");
 }
-
-
-
-
-
-
-
-
