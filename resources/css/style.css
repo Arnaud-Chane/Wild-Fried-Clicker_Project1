@@ -4,7 +4,7 @@
   --numberColor: #AD4560;
   --backgroundClassic: #AD4560;
   --rowColor: #FABB5A;
-  --inputColor: #FABB5A;
+  --forminputColor: #FABB5A;
 
   --textColor: white;
   --ptextColor: #ffffff;
@@ -332,8 +332,8 @@ div.title-account h1 {
   justify-content: center;
 }
 
-input {
-  background-color: var(--inputColor);
+form input {
+  background-color:var(--forminputColor);
   border: none;
   border-radius: 35px;
   padding: 10px;
@@ -729,7 +729,7 @@ div.title-account h1{
 }
 
 
-input {
+form input {
   height:60px;
 }
 
