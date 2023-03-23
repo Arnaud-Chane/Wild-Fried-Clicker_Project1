@@ -1,4 +1,4 @@
-# project1
+# Wild Fried Clicker - Project1 :
 
 URL for the game :\
 https://wild-fried-clicker.netlify.app/
