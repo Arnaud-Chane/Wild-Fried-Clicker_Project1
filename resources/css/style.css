@@ -2,10 +2,27 @@
 :root {
   --numberColor: #AD4560;
   --rowColor: #FABB5A;
+
+  --inputColor: #FABB5A;
+  --forminputColor:#FABB5A;
+  --submitButton:#b809b0;
+  --submitText:#ffd54f;
   --textColor: white;
+  --ptextColor: #ffffff;
+  --accountSectionColor:#FF5245;
+  /* lalala */
+
+
+  --textColor: white;
+
   /* TEXT */
   --title-Font: 'Rampart One', cursive;
   --text-Font: 'Barrio', cursive;
+
+  --ptextFont: 'Barrio', cursive;
+  
+
+
   --h1Size: 30px;
   --h2Size: 30px;
 }
@@ -294,10 +311,21 @@ img[name="settingsMain"] {
 /* HEART BEAT */
 
 
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--textColor);
+  height: 280px;
+}
+
+
 @-webkit-keyframes heartBeatPhoto {
   0% {
     transform: scale(1);
   }
+
 
   14% {
     transform: scale(3);
@@ -307,14 +335,37 @@ img[name="settingsMain"] {
     transform: scale(1);
   }
 
+
+#submit-button {
+  background-color:var(--submitButton);
+  font-size: 20px;
+  font-family: var(--text-Font);
+  color:var(--submitText);
+
+}
+
+.check-container {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin:auto;
+  width:90%;
+}
+
   42% {
     transform: scale(3);
   }
+
 
   70% {
     transform: scale(1);
   }
 }
+
+#check {
+  width: 25px;
+}
+
 
 @keyframes heartBeatPhoto {
   0% {
@@ -325,9 +376,11 @@ img[name="settingsMain"] {
     transform: scale(3);
   }
 
+
   28% {
     transform: scale(1);
   }
+
 
   42% {
     transform: scale(3);
@@ -640,8 +693,77 @@ img[name="secondWing"] {
   }
 
   img.faceImg {
+
+    height: 60px;
+    width: auto;
+  }
+
+/* LAPTOP MEDIA QUERY ACCOUNT PAGE */
+
+div.accountPage {
+  display: flex;
+    justify-content: center;
+}
+
+
+div.form-container {
+  display:flex;
+  justify-content: center;
+  width:40vw;
+  height:70vh;
+  
+}
+
+
+
+div.title-account {
+  height:70vh;
+  display:flex;
+}
+
+div.title-account h1{
+  
+  font-size:50px;
+  margin-right:40px;
+}
+
+form input {
+  height:60px;
+}
+
+
+.check-container {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin: 5px 5px 5px 5px;
+}
+
+
+p {
+  font-size: 25px;
+}
+
+
+.or-container {
+  margin-bottom:30px;
+}
+
+
+.account-logos {
+  margin-top:5px;
+  margin-bottom:5px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+  
+  #textGoods{
+    font-size: 2vh;
+
     height: 50px;
     width: 50px;
     margin: auto 10px;
+
   }
 }
